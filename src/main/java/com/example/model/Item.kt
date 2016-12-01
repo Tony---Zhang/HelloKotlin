@@ -1,5 +1,5 @@
 package com.example.model
 
-data class Item(var price: Float = 0f) {
+data class Item(var price: Float = 0f, var tax: Float = 1.0f) {
 
 }

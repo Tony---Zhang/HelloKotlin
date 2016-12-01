@@ -10,8 +10,13 @@ object Main {
         val sc = Scanner(System.`in`)
         println("Please input price: ")
         val price = sc.nextFloat()
+        println("Please input state: ")
+        val state = sc.next()
+
         val item = Item()
+        val stateHandler = StateHandler()
         item.price = price
+        item.tax = stateHandler.handle(state)
 
         println(item)
     }
