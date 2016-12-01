@@ -16,11 +16,6 @@ class StateHandler() {
     }
 
     fun handle(state: String): kotlin.Float {
-        val tax = stateMap[state.toLowerCase(Locale.US)]
-        if (null == tax) {
-            return 0f
-        } else {
-            return tax
-        }
+        return stateMap[state.toLowerCase(Locale.US)] ?: 0f
     }
 }

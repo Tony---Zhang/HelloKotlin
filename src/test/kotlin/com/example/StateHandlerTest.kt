@@ -10,9 +10,9 @@ class StateHandlerTest {
     @Test
     fun testHandleStateValidate() {
         val states = arrayOf("ut", "nv", "tx", "al", "ca", "CA")
-        val taxs = floatArrayOf(6.85f, 8.00f, 6.25f, 4.00f, 8.25f, 8.25f)
+        val taxes = floatArrayOf(6.85f, 8.00f, 6.25f, 4.00f, 8.25f, 8.25f)
         for (i in states.indices) {
-            assertThat(handler.handle(states[i])).isEqualTo(taxs[i])
+            assertThat(handler.handle(states[i])).isEqualTo(taxes[i])
         }
     }
 
