@@ -40,7 +40,7 @@ class Discount5000Test {
 
         val save = discount.discount()
 
-        Assertions.assertThat(save.compareTo(0f)).isEqualTo(0)
+        Assertions.assertThat(save.compareTo(147f)).isEqualTo(0)
     }
 }
 

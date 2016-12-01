@@ -1,7 +1,5 @@
 package com.example
 
-import com.example.discount.Discount
-import com.example.discount.Discount1000
 import com.example.discount.Discount5000
 import com.example.model.Item
 import java.util.*
@@ -24,13 +22,7 @@ object Main {
         val cart = ShoppingCart()
         cart.add(item, count)
         val calculate = cart.calculate()
-        var discount = 0f
-        val discounts = listOf<Discount>(Discount1000(calculate), Discount5000(calculate))
-        discounts.forEach {
-            if (it.support()) {
-                discount = it.discount()
-            }
-        }
+        val discount = Discount5000(calculate).discount()
 
         println("Shoppping Result: ")
         println("item: $item")

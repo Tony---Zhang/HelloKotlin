@@ -5,4 +5,6 @@ interface Discount {
     fun support(): Boolean
 
     fun discount(): Float
+
+    fun getSuccessor(): Discount?
 }
