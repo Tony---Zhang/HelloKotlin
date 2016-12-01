@@ -16,8 +16,8 @@ class ShoppingCartTest {
         cart.add(item, count)
 
         assertThat(cart.shoppingList.size).isEqualTo(1)
-        assertThat(cart.shoppingList.get(0).first).isEqualTo(item)
-        assertThat(cart.shoppingList.get(0).second).isEqualTo(count)
+        assertThat(cart.shoppingList[0].first).isEqualTo(item)
+        assertThat(cart.shoppingList[0].second).isEqualTo(count)
     }
 
     @Test
