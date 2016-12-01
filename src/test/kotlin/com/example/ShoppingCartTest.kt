@@ -1,6 +1,5 @@
 package com.example
 
-import com.example.model.Item
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
