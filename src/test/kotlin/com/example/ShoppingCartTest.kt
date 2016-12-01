@@ -19,5 +19,10 @@ class ShoppingCartTest {
         assertThat(cart.shoppingList.get(0).first).isEqualTo(item)
         assertThat(cart.shoppingList.get(0).second).isEqualTo(count)
     }
+
+    @Test
+    fun testCalculate() {
+        assertThat(cart.calculate()).isEqualTo(0f)
+    }
 }
 

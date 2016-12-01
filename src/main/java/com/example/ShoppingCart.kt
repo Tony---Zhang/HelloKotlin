@@ -10,4 +10,8 @@ class ShoppingCart {
         shoppingList.add(Pair(item, count))
     }
 
+    fun calculate(): Float {
+        return 0f
+    }
+
 }
