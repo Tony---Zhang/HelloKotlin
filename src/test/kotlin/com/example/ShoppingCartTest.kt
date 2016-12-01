@@ -11,7 +11,7 @@ class ShoppingCartTest {
 
     @Test
     fun testAddGood() {
-        val item = Item(price = 10.5f, tax = 6.5f)
+        val item = TestDateFactory.provideItem()
         val count = 10
         cart.add(item, count)
 
@@ -28,7 +28,7 @@ class ShoppingCartTest {
 
     @Test
     fun testCalculateOneItem() {
-        val item = Item(price = 10.5f, tax = 6.5f)
+        val item = TestDateFactory.provideItem()
         val count = 10
         cart.add(item, count)
 
