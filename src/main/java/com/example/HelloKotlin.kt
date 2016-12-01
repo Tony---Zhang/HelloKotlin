@@ -16,15 +16,16 @@ object Main {
         val count = sc.nextInt()
 
         val item = Item()
-        val stateHandler = StateHandler()
         item.price = price
-        item.tax = stateHandler.handle(state)
+        item.tax = StateHandler().handle(state)
         val cart = ShoppingCart()
         cart.add(item, count)
+        val total = cart.calculate().toString().format(2)
 
 
         println("Shoppping Result: ")
         println("item: $item")
         println("count: $count")
+        println("total: $total")
     }
 }

@@ -21,8 +21,20 @@ class ShoppingCartTest {
     }
 
     @Test
-    fun testCalculate() {
+    fun testCalculateEmpty() {
+        assertThat(cart.shoppingList.isEmpty()).isTrue()
         assertThat(cart.calculate()).isEqualTo(0f)
+    }
+
+    @Test
+    fun testCalculateOneItem() {
+        val item = Item(price = 10.5f, tax = 6.5f)
+        val count = 10
+        cart.add(item, count)
+
+        val total = cart.calculate()
+
+        assertThat(total.compareTo(111.825f))
     }
 }
 
