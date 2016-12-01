@@ -24,7 +24,7 @@ object Main {
         val calculate = cart.calculate()
         val discount = Discount50000(calculate).discount()
 
-        println("Shoppping Result: ")
+        println("Shopping Result: ")
         println("item: $item")
         println("count: $count")
         println("discount: ${"%.2f".format(discount)}")
