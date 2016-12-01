@@ -12,12 +12,19 @@ object Main {
         val price = sc.nextFloat()
         println("Please input state: ")
         val state = sc.next()
+        println("Please input count: ")
+        val count = sc.nextInt()
 
         val item = Item()
         val stateHandler = StateHandler()
         item.price = price
         item.tax = stateHandler.handle(state)
+        val cart = ShoppingCart()
+        cart.add(item, count)
 
-        println(item)
+
+        println("Shoppping Result: ")
+        println("item: $item")
+        println("count: $count")
     }
 }
