@@ -3,7 +3,7 @@ package com.example.discount
 class Discount1000(var total: Float = 0f) : Discount {
 
     override fun support(): Boolean {
-        return total > 1000f
+        return total > 1000f && total < 5000f
     }
 
     override fun discount(): Float {

@@ -1,5 +1,8 @@
 package com.example
 
+import com.example.discount.Discount
+import com.example.discount.Discount1000
+import com.example.discount.Discount5000
 import com.example.model.Item
 import java.util.*
 
@@ -20,12 +23,19 @@ object Main {
         item.tax = StateHandler().handle(state)
         val cart = ShoppingCart()
         cart.add(item, count)
-        val total = cart.calculate().toString().format(2)
-
+        val calculate = cart.calculate()
+        var discount = 0f
+        val discounts = listOf<Discount>(Discount1000(calculate), Discount5000(calculate))
+        discounts.forEach {
+            if (it.support()) {
+                discount = it.discount()
+            }
+        }
 
         println("Shoppping Result: ")
         println("item: $item")
         println("count: $count")
-        println("total: $total")
+        println("discount: ${"%.2f".format(discount)}")
+        println("total: ${"%.2f".format(calculate - discount)}")
     }
 }
