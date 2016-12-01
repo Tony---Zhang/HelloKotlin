@@ -15,5 +15,14 @@ class Discount1000Test {
 
         assertThat(support).isFalse()
     }
+
+    @Test
+    fun testValidate() {
+        discount.total = 1001f
+
+        val support = discount.support()
+
+        assertThat(support).isTrue()
+    }
 }
 
