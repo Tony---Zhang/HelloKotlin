@@ -7,7 +7,7 @@ class StateHandler() {
     val stateMap: Map<String, Float>
 
     init {
-        stateMap = HashMap<String, Float>()
+        stateMap = HashMap()
         stateMap.put("ut", 6.85f)
         stateMap.put("nv", 8.00f)
         stateMap.put("tx", 6.25f)
@@ -15,5 +15,5 @@ class StateHandler() {
         stateMap.put("ca", 8.25f)
     }
 
-    fun handle(state: String): kotlin.Float = stateMap[state.toLowerCase(Locale.US)] ?: 0f
+    fun handle(state: String): Float = stateMap[state.toLowerCase(Locale.US)] ?: 0f
 }
