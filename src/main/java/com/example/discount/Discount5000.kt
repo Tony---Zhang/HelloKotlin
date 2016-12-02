@@ -6,9 +6,7 @@ class Discount5000(var total: Float = 0f) : Discount {
         return Discount1000(total)
     }
 
-    override fun support(): Boolean {
-        return total >= 5000f && total < 7000f
-    }
+    override fun support(): Boolean = total >= 5000f && total < 7000f
 
     override fun discount(): Float {
         return when {
