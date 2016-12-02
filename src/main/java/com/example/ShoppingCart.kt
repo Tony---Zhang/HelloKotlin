@@ -11,7 +11,6 @@ class ShoppingCart {
     }
 
     fun calculate(): Float {
-        if (shoppingList.isEmpty()) return 0f
         var total = 0f
         shoppingList.forEach {
             val item = it.first

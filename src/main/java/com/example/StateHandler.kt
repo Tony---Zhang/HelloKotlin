@@ -15,5 +15,5 @@ class StateHandler() {
         stateMap.put("ca", 8.25f)
     }
 
-    fun handle(state: String): Float = stateMap[state.toLowerCase(Locale.US)] ?: 0f
+    fun handle(state: String) = stateMap[state.toLowerCase(Locale.US)] ?: 0f
 }
