@@ -15,7 +15,5 @@ class StateHandler() {
         stateMap.put("ca", 8.25f)
     }
 
-    fun handle(state: String): kotlin.Float {
-        return stateMap[state.toLowerCase(Locale.US)] ?: 0f
-    }
+    fun handle(state: String): kotlin.Float = stateMap[state.toLowerCase(Locale.US)] ?: 0f
 }
