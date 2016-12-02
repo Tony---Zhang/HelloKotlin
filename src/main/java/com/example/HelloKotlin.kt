@@ -1,6 +1,7 @@
 package com.example
 
 import com.example.discount.Discount50000
+import com.example.discount.DiscountStrategy
 import com.example.model.Item
 import java.util.*
 
@@ -22,7 +23,7 @@ object Main {
         val cart = ShoppingCart()
         cart.add(item, count)
         val calculate = cart.calculate()
-        val discount = Discount50000(calculate).discount()
+        val discount = DiscountStrategy.calculateDiscount(Discount50000(calculate))
 
         println("Shopping Result: ")
         println("item: $item")

@@ -26,21 +26,12 @@ class Discount5000Test {
     }
 
     @Test
-    fun testDiscountWhenValid() {
+    fun testDiscount() {
         discount.total = 5050f
 
         val save = discount.discount()
 
         Assertions.assertThat(save.compareTo(252.5f)).isEqualTo(0)
-    }
-
-    @Test
-    fun testDiscountWhenInvalid() {
-        discount.total = 4900f
-
-        val save = discount.discount()
-
-        Assertions.assertThat(save.compareTo(147f)).isEqualTo(0)
     }
 }
 
